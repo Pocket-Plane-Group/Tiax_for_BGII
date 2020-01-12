@@ -1,0 +1,10 @@
+IF
+GlobalGT("AsylumPlot","GLOBAL",54)
+Global("O#TiaxSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#TiaxSpawn","GLOBAL",1)
+CreateVisualEffect("SPPORTAL",[1000.1150]) 
+Wait(2) 
+CreateCreature("O#Tiax",[1000.1150],0) 
+END

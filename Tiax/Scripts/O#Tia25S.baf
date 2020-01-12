@@ -1,0 +1,29 @@
+// Initiate dialogue
+IF
+Global("O#TiaxSummoned","GLOBAL",1)
+THEN
+RESPONSE #100
+StartDialogueNoSet([PC])
+Wait(1)
+END 
+
+// Holy Symbol Fixer
+IF
+LevelGT(Myself,24)
+Global("O#TiaxGivenHolySymbol","GLOBAL",0)
+HasItem("Belt14",Myself)
+THEN
+RESPONSE #100
+SetGlobal("O#TiaxGivenHolySymbol","GLOBAL",1)
+DestroyItem("Belt14")
+GiveItemCreate("O#CyrSym",Myself,1,0,0)
+END
+
+// Hotkey fixer
+IF
+HotKey(K)
+THEN
+RESPONSE #100
+StartCutSceneMode()
+StartCutScene("O#TiaxF")
+END

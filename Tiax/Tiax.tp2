@@ -1,0 +1,210 @@
+BACKUP ~Tiax/Backup~
+AUTHOR ~http://forums.pocketplane.net~
+VERSION ~v5~
+
+README ~Tiax/%LANGUAGE%/Readme-Tiax.txt~ ~Tiax/Readme-Tiax.txt~ 
+
+ALWAYS
+  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN
+    ACTION_IF GAME_IS ~eet~ BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
+  END
+
+
+  // Only setup-Tiax.tra needs to be reloaded
+  ACTION_DEFINE_ARRAY O#reload BEGIN Setup-Tiax END
+
+  // There is no "language" folder so the root of all languages in %MOD_FOLDER%
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charsets = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%~
+      reload_array = O#reload
+  END
+END
+
+AUTO_TRA ~Tiax/%s~
+
+LANGUAGE ~English~ ~English~ ~Tiax/English/Setup-Tiax.tra~
+LANGUAGE ~Russian~ ~Russian~ ~Tiax/Russian/Setup-Tiax.tra~
+LANGUAGE ~French (Translated by Eleima and Galathee)~  ~French~  ~Tiax/French/Setup-Tiax.tra~
+
+BEGIN @0
+
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+LOAD_TRA ~Tiax/%LANGUAGE%/Setup-Tiax-EE.tra~
+ADD_JOURNAL @24 USING ~Tiax/%LANGUAGE%/O#Tiax.tra~ 
+END
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+COPY ~Tiax/Characters/O#Tiax.cre~ ~override/O#Tiax.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+COMPILE EVALUATE_BUFFER ~Tiax/Dialogue/BO#Tiax.d~
+	~Tiax/Dialogue/O#Tiax.d~
+	~Tiax/Dialogue/O#TiaxJ.d~
+	~Tiax/Dialogue/O#TiaxP.d~
+
+	~Tiax/Scripts/O#TiaxF.baf~
+	~Tiax/Scripts/O#TiaxS.baf~
+
+EXTEND_TOP ~AR1516.bcs~ ~Tiax/Scripts/AR1516.baf~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN
+BEGIN
+
+COPY ~Tiax/Characters/O#Tiax25.cre~ ~override/O#Tiax25.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+COMPILE EVALUATE_BUFFER ~Tiax/Dialogue/BO#Tia25.d~
+	~Tiax/Dialogue/O#Tiax25.d~
+	~Tiax/Dialogue/O#Tia25J.d~
+	~Tiax/Dialogue/O#Tia25P.d~
+
+	~Tiax/Scripts/O#Tia25S.baf~
+
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+COMPILE	~Tiax/Dialogue/TiaxEE.d~
+END
+
+EXTEND_TOP ~AR6200.bcs~ ~Tiax/Scripts/AR6200.baf~
+
+COPY ~Tiax/Epilogue/O#Tiaxzz.2da~ ~override/O#Tiax01.2da~
+REPLACE ~99999~ @45
+
+COPY ~Tiax/Items/O#CyrSym.itm~ ~override/O#CyrSym.itm~
+SAY NAME1 @46
+SAY NAME2 @46
+SAY UNIDENTIFIED_DESC @47
+SAY DESC @47
+
+END
+
+APPEND ~interdia.2da~ ~O#Tiax       BO#Tiax       BO#Tia25~
+UNLESS ~O#Tiax~
+
+APPEND ~pdialog.2da~ ~O#Tiax        O#TiaxP             O#TiaxJ            O#TiaxD             O#Tia25P             O#Tia25J             O#Tia25D       O#Tia25S~
+UNLESS ~O#Tiax~
+
+LAF HANDLE_AUDIO END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+  INCLUDE ~EET/other/EET_functions.tph~
+  LAF ~EET_NPC_TRANSITION~
+    INT_VAR
+      type = 2
+      default_ToB = 1
+      clean_ToB = 1
+    STR_VAR
+      dv = "O#Tiax"
+      override_SoA = "O#TIAXS"
+      override_ToB = "O#TIA25S"
+      dialog_ToB = "O#TIAX25"
+      cre_ToB = "O#Tiax25"
+      traFile = EVAL "Tiax/%LANGUAGE%/O#Tia25J.tra"
+      string = "@8" //Bring me Tiax, the gnome thief/cleric.
+      stringPosDV = "Viconia"
+      clean_ToB_DV = "Tiax"
+  END
+END ELSE BEGIN
+  COMPILE ~Tiax/Dialogue/FATESP.d~ USING ~Tiax/%LANGUAGE%/O#Tia25J.tra~
+END

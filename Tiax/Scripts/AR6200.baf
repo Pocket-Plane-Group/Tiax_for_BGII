@@ -1,0 +1,11 @@
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Tiax")
+Global("O#TiaxBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#TiaxBio","GLOBAL",1)
+TextScreen("O#Tiax01")
+SmallWait(1)
+Continue()
+END

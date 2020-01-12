@@ -1,0 +1,57 @@
+@0 = ~Tiax NPC MOD for Baldur's Gate II~
+@1 = ~Tiax~
+@2 = ~All the world will tremble beneath the feet of Tiax!~ [O#TIAX31]
+@3 = ~Tiax will rule... from a distance!~ [O#TIAX03]
+@4 = ~Tiax is impressed with this group! You will continue to serve him once he rules!~ [O#TIAX04]
+@5 = ~Tiax fails to see how this will aid in his ascension!~ [O#TIAX05]
+@6 = ~Continue with this... unprofitable behavior, and Tiax will seek his destiny elsewhere!~ [O#TIAX06]
+@7 = ~You are unworthy to sit at the feet of great Tiax! I shall find another for that exalted spot!~ [O#TIAX07]
+@8 = ~As it should be! Tiax was destined to lead!~ [O#TIAX08]
+@9 = ~Tiax needs rest if he is to rule!~ [O#TIAX09]
+@10 = ~We get no closer to world domination just standing about!~ [O#TIAX10]
+@11 = ~Tiax will smite thee!~ [O#TIAX11]
+@12 = ~Tiax will smite thee!~ [O#TIAX11]
+@13 = ~Tiax will smite thee!~ [O#TIAX11]
+@14 = ~Tiax will smite thee!~ [O#TIAX11]
+@15 = ~Tiax will smite thee!~ [O#TIAX11]
+@16 = ~~ [O#TIAX16]
+@17 = ~~ [O#TIAX17]
+@18 = ~Destiny had best hurry.  Tiax does not feel well at all.~ [O#TIAX18]
+@19 = ~When Tiax rules, this forest will be lumber for but a leg of his throne!~ [O#TIAX19]
+@20 = ~When Tiax rules, the stones of this city shall build his castle!~ [O#TIAX20]
+@21 = ~Why must Tiax traverse this dank hole?! Cyric said nothing of soggy boots!~ [O#TIAX21]
+@22 = ~Tiax must squint in the sunlight! One day... revenge shall be his!~ [O#TIAX22]
+@23 = ~Night would DARE hamper the sight of Tiax?!~ [O#TIAX23]
+@24 = ~Who dares prod Tiax?!~ [O#TIAX24]
+@25 = ~Tiax hears you.~ [O#TIAX25]
+@26 = ~Soon Tiax rules!~ [O#TIAX26]
+@27 = ~All the world will tremble beneath the feet of Tiax!~ [O#TIAX27]
+@28 = ~Tiax does as ye will, but one day - BOOM! He rules!~ [O#TIAX28]
+@29 = ~Has Tiax mentioned he's going to rule? 'Tis inevitable.~ [O#TIAX29]
+@30 = ~Tiax moves. Make way!~ [O#TIAX30]
+@31 = ~Tiax is as Tiax duz.~ [O#TIAX31]
+@32 = ~Tiax WILL rule ALL!~ [O#TIAX32]
+@33 = ~Your goals are petty in comparison to the wonder of Tiax!~ [O#TIAX33]
+@34 = ~Give thy tongue a holiday! Tiax so commands!~ [O#TIAX34]
+@35 = ~Do as ye will, but 'tis for naught!  Tiax must rule!~ [O#TIAX35]
+@36 = ~Sure you be smart, but none are grander than Tiax!~ [O#TIAX36]
+@37 = ~Tiax knows he will rule in the end.~ [O#TIAX37]
+@38 = ~None shall stand where Tiax stands, lest he walks atop them.~ [PPTIAX14]
+@39 = ~Tiax will smite thee!~ [PPTIAX03]
+@40 = ~Tiax shall rule the world... just you wait.~ [PPTIAX01]
+@41 = ~Tiax and his greatness shall squash you as a bug, you... you... insolent BUG! Never mind that Tiax' weapon is faulty, he shall squash you anyway!~ [O#TIAX38]
+@42 = ~Ye cup-shot muttonhead! Tiax will slap you silly... when he rules! Tiax cannot carry this much! He needs to rule!~ [O#TIAX39]
+@43 = ~Blast you!~ [O#TIAX02]
+@44 = ~When asked about his past TIAX ignores you entirely, preferring instead to loudly proclaim what is in store for his future. He obviously worships Cyric, but also seems to share a touch of his madness. Tiax unquestioningly believes that he is destined to rule the world, and his fervor makes him blind to the ridiculous nature of the goal. He seems harmless enough for now.~
+@45 = ~By all accounts, Tiax was shaken with the way the Bhaalspawn saga ended. Cyric was pleased with Tiax' actions, however, now that the Prince of Lies had a full account of <CHARNAME>'s actions and character on his hands, and granted Tiax a long-awaited status of his Chosen. Following Cyric's orders, or sometimes his own feet, Tiax travelled the Realms for quite a while, somehow always ending up in the company of one famous adventurer or another. His power grew, and soon Tiax' constant demands of omnipotent rule were partly sated. For over three months, he ruled in Innarlith, terrorizing the nearby territories, and after his inevitable assassination, Cyric was only too pleased to grant to his faithful, if mad, servant, a place on his own Plane. Now Tiax stands by his deity in Pandemonium, helping him to preserve the order(or, rather, chaos) at the Supreme Throne, and jolting the denizens with echoing, far-reaching cries: "Finally, Tiax rules!"~
+@46 = ~Holy Symbol of Cyric~
+@47 = ~Only those most worthy and devoted servants of the Black Sun are granted these powerful holy symbols.
+
+STATISTICS:
+
+  Grants an additional 6th and 7th level spell
+  5% Magic Resistance while worn
+  +1 to Strength while worn
+
+Usable By:
+Evil Clerics~
