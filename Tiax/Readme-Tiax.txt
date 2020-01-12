@@ -1,5 +1,5 @@
 			Tiax NPC MOD for Baldur's Gate II
-				   Version 5
+				   Version 6
 			  A Pocket Plane Group Project
 			   http://www.pocketplane.net
 
@@ -157,6 +157,11 @@ winLAME					http://winlame.sourceforge.net
 -------------------
 6. Version History
 -------------------
+
+Version 6
+-updated tiax.ini with the GitHub address for download
+-added folder libiconv-1.9.2-1-src.zip with iconv licence info
+
 
 Version 5
 - EET compatibility (by k4thos)
